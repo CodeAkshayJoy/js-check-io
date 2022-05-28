@@ -1,1 +1,2 @@
-# js-check-io
+npm install -- install dependencies
+

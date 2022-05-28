@@ -1,0 +1,16 @@
+{
+  "name": "jscheck.io",
+  "version": "1.0.0",
+  "description": "JsCheck.io challenges using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "watch:build": "tsc --watch"
+  },
+  "author": "Akshay P Joy",
+  "license": "ISC",
+  "dependencies": {    
+  },
+  "devDependencies": {
+    "@types/assert": "^1.5.6"
+  }
+}
