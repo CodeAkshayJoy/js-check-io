@@ -35,14 +35,17 @@ Output: 17
 */
 function maximumWealth(accounts) {
     let wealths = [];
+    var max = 0;
     for (let i = 0; i < accounts.length; ++i) {
         var wealth = 0;
         for (let j = 0; j < accounts[i].length; ++j) {
             wealth += accounts[i][j];
         }
-        wealths.push(wealth);
+        if (wealth > max) {
+            max = wealth;
+        }
     }
-    return Math.max(...wealths);
+    return max;
 }
 ;
 assert_1.default.equal(maximumWealth([[2, 8, 7], [7, 1, 3], [1, 9, 5]]), 17);

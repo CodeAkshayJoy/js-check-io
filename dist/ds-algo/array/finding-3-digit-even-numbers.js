@@ -41,3 +41,25 @@ Constraints:
 3 <= digits.length <= 100
 0 <= digits[i] <= 9
 */
+function findEvenNumbers(digits) {
+    var results = new Set();
+    for (let i = 0; i < digits.length; ++i) {
+        if (digits[i] !== 0) {
+            for (let j = 0; j < digits.length; ++j) {
+                if (i != j) {
+                    for (let k = 0; k < digits.length; ++k) {
+                        if (i != k && j != k && digits[k] % 2 == 0) {
+                            results.add((digits[i] * 100 + digits[j] * 10 + digits[k]));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    var sortedArray = [...results].sort((n1, n2) => n1 - n2);
+    console.log(...sortedArray);
+    return sortedArray;
+}
+;
+console.log("Finding # digit Even Numbes...");
+findEvenNumbers([2, 1, 3, 0]);
